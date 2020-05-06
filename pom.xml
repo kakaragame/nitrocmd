@@ -56,7 +56,7 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.kakara</groupId>
+            <groupId>org.kakara.core</groupId>
             <artifactId>core</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>provided</scope>
