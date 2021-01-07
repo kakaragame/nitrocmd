@@ -1,6 +1,7 @@
 package org.kakara.nitrocmd;
 
-import org.kakara.core.command.CommandSender;
+
+import org.kakara.core.common.command.CommandSender;
 
 public class KakaraContorller {
     private CommandSender commandSender;

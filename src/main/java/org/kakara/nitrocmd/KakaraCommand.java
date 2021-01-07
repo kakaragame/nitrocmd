@@ -4,10 +4,12 @@ import dev.nitrocommand.core.CommandParser;
 import dev.nitrocommand.core.NitroCommandObject;
 import dev.nitrocommand.core.NitroSubCommand;
 import dev.nitrocommand.core.Utils;
-import org.kakara.core.command.CommandSender;
-import org.kakara.core.mod.Mod;
-import org.kakara.core.mod.game.ModCommand;
-import org.kakara.core.player.Player;
+import org.kakara.core.common.command.CommandSender;
+import org.kakara.core.common.mod.Mod;
+import org.kakara.core.common.mod.game.GameMod;
+import org.kakara.core.common.mod.game.ModCommand;
+import org.kakara.core.common.player.Player;
+
 
 import java.util.Set;
 
@@ -15,8 +17,8 @@ public class KakaraCommand extends ModCommand {
     private KakaraCommandCore commandCore;
     private NitroCommandObject object;
 
-    public KakaraCommand(Set<String> aliases, String description, Mod mod, String command, KakaraCommandCore commandCore, NitroCommandObject object) {
-        super(aliases, description, mod, command);
+    public KakaraCommand(Set<String> aliases, String description, GameMod mod, String command, KakaraCommandCore commandCore, NitroCommandObject object) {
+        super(aliases, description,  mod, command);
         this.commandCore = commandCore;
         this.object = object;
     }
@@ -53,4 +55,6 @@ public class KakaraCommand extends ModCommand {
 
         Utils.executeCommand(subCommand, Utils.getArguments(message, subCommand, subCommand.method().getParameters(), controller.getArgs(), commandCore));
     }
+
+
 }
